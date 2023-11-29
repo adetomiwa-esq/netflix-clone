@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import background from '../../public/images/netflixBackground.jpg'
 import Image from 'next/image'
 
@@ -7,9 +8,9 @@ export default function Top() {
       <Image src="/images/netflixBackground.jpg" fill={true} alt='background' className='brightness-[0.4] absolute w-full h-full top-0 left-0 -z-[1]'/> 
 
       <header className='flex justify-between items-center px-[8%] h-20'>
-        <div className='text-red-500 text-5xl font-bold' style={{borderRadius: '50%/100px 100px 0 0'}}>NETFLIX</div>
+        <Image src='/images/text-logo.png' alt='logo' width={200} height={100} />
 
-        <button className='px-2 rounded-sm bg-red-500 text-white'>Sign In</button>
+        <Link href='/login'><button className='px-2 rounded-sm bg-red-500 text-white'>Sign In</button></Link>
       </header>
 
       <div className='h-[calc(100vh-80px)] flex items-center text-center pt-12'>
