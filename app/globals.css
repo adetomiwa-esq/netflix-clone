@@ -5,7 +5,39 @@
 
 
 body {
-    background-color: rgb(56, 55, 55)
+    background-color: #141414
     ;
     color: white;
+}
+
+.row_posters {
+    display: flex;
+    /* overflow-y: hidden; */
+    /* overflow-x: scroll; */
+    /* padding: 20px; */
+    /* transform: translateX(-500px); */
+    max-width: fit-content;
+    padding-left: 20px;
+}
+
+.row_posters::-webkit-scrollbar {
+    display: none;
+}
+
+.row_poster {
+    /* object-fit: contain; */
+    /* max-height: 100px; */
+    width: 19.7%;
+    margin-right: 10px;
+    transition: transform 450ms;
+}
+
+.row_poster:hover {
+    transform: scale(1.08);
+}
+
+@media(max-width: 900px){
+    .row_poster {
+        width: 28%;
+    }
 }
