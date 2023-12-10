@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { oneNight } from './MockData';
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
+import { FaAngleLeft, FaAngleRight, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
@@ -97,8 +97,13 @@ export default function Row({movies, title} : Props) {
 
         <div className='relative group w-fit'>
             <div className="absolute right-0 flex items-center justify-center text-2xl w-9 h-full top-0 cursor-pointer z-10 opacity-0 group-hover:opacity-100" onClick={next}>
-                <div className="w-full h-[100%] opacity-[9.5] bg-[#13121286] absolute right-0 z-[9]"></div>
-                <FaAngleRight />
+                <div className="w-full h-[100%] opacity-[9.5] bg-[#13121286] absolute right-0 z-[12]"></div>
+                <FaChevronRight />
+            </div>
+
+            <div className="absolute left-0 flex items-center justify-center text-2xl w-9 h-full top-0 cursor-pointer z-10 opacity-0 group-hover:opacity-100" onClick={next}>
+                <div className="w-full h-[100%] opacity-[9] bg-[#13121286] absolute right-0 z-[12]"></div>
+                <FaChevronLeft />
             </div>
 
             <div
