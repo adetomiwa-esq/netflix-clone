@@ -25,19 +25,26 @@ export default function Top() {
     else{setBg('')}
         // const end = posters[posters.length-1]?.getBoundingClientRect().right
   }, [])
+  
   return (
-    <section className={`mt-[64px] h-[50px] w-full ${bg} z-30 px-9 flex items-center justify-between`}>
+    <section className={`mt-[64px] h-[50px] w-full ${bg} z-30 px-2 flex items-center justify-between sm:px-9`}>
         <div className="flex items-center">
-            <h2 className='text-4xl mr-7'>Chat Room</h2>
-            <select name="" id="" className='bg-transparent border w-[100px] px-1 mr-3 py-1 text-sm'>
+            <h2 className='text-lg mr-2 md:text-4xl sm:mr-7'>Chat Room</h2>
+            <select name="" id="" className='bg-transparent border px-1 mr-3 py-1 text-sm'>
                 <option className='bg-[#141414] opacity-70' value="">Genre</option>
                 <option className='bg-[#141414] opacity-70' value="">Dubbing</option>
                 <option className='bg-[#141414] opacity-70' value="">Subtitles</option>
             </select>
         </div>
         <div className="flex items-center">
-            <div className='border py-1 px-2'><HiMiniBars3CenterLeft /></div>
-            <div className='border py-1 px-3'><PiSquaresFourFill /></div>
+          <label htmlFor="" className='mx-2'>Sort by</label>
+          <select name="" id="" className='bg-transparent border py-1 px-1'>
+              {
+                  languages.map((lang, index) => (
+                      <option className='bg-[#141414] opacity-70' key={index} value="">{lang}</option>
+                  ))
+              }
+          </select>
         </div>
     </section>
   )

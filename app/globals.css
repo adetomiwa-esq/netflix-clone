@@ -27,7 +27,7 @@ body {
 .row_poster {
     /* object-fit: contain; */
     /* max-height: 100px; */
-    width: 19.7%;
+    min-width: 19.7%;
     margin-right: 10px;
     transition: transform 450ms;
 }

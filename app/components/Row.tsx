@@ -12,6 +12,7 @@ interface Props{
     title: string
 } 
 
+
 export default function Row({movies, title} : Props) {
     const Movies = movies
     const Title = title
@@ -113,11 +114,13 @@ export default function Row({movies, title} : Props) {
 
                 {
                     Movies.map((x, index) => (
-                        <img
-                            className={`row_poster`}
-                            key={index}
+                        <Link href="/nowplaying" key={index} className={`row_poster`}>
+                            <img
+                            className={`w-full`}
                             src={x.imgSrc} 
                             alt='' />
+                        </Link>
+                        
                     ))
                 }
 

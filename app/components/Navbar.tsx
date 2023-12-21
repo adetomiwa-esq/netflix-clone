@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { FaCaretDown, FaCaretUp, FaRegBell, FaBars } from 'react-icons/fa'
 import { FiSearch } from 'react-icons/fi'
+import { MdChat } from 'react-icons/md'
 
 export default function Navbar() {
 
@@ -47,7 +48,8 @@ export default function Navbar() {
           </ul>
         </div>
 
-        <ul className="ml-auto flex items-center text-xl w-[160px] justify-between">
+        <ul className="ml-auto flex items-center text-xl w-[180px] justify-between">
+          <Link href='/chat'><li><MdChat /></li></Link>
           <li className='text-2xl'><FiSearch /></li>
           <li className='text-sm'>kids</li>
           <li><FaRegBell /></li>
