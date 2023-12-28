@@ -30,6 +30,7 @@ body {
     min-width: 19.7%;
     margin-right: 10px;
     transition: transform 450ms;
+    max-width: 250px;
 }
 
 .row_poster:hover {
@@ -46,6 +47,9 @@ body {
     .row_poster {
         width: 70px;
     }
+    .row_poster:hover {
+        transform: scale(1);
+    }
 }
 
 option:hover {
@@ -57,3 +61,11 @@ option:checked {
     background-color: #141414;
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }

@@ -72,7 +72,7 @@ export default function Row({movies, title} : Props) {
     }
     console.log(current)
   return (
-    <section className='overflow-x-scroll md:overflow-x-hidden  mt-5'>
+    <section className='scrollbar-hide overflow-x-scroll overflow-y-hidden md:overflow-x-hidden  mt-5'>
         <Link href='/' className='pl-[20px] text-lg flex items-center h-8 group w-fit'>{Title}<span className='text-sm w-0 overflow-x-hidden block group-hover:w-fit ease-in-out transition-all duration-1000 delay-300 ml-1'>Explore All</span></Link>
         
         {/* <div className='relative w-full flex justify-center'>
@@ -97,12 +97,12 @@ export default function Row({movies, title} : Props) {
         </div> */}
 
         <div className='relative group w-fit'>
-            <div className="absolute right-0 hidden items-center justify-center text-2xl w-9 h-full top-0 cursor-pointer z-10 opacity-0 group-hover:opacity-100 sm:flex" onClick={next}>
+            <div className={`absolute right-0 hidden items-center justify-center text-2xl w-9 h-[120%] top-1/2 -translate-y-1/2 cursor-pointer z-10 opacity-0 group-hover:opacity-100 ${ movies.length > 4 ? 'sm:flex' : ''}`} onClick={next}>
                 <div className="w-full h-[100%] opacity-[9.5] bg-[#13121286] absolute right-0 z-[12]"></div>
                 <FaChevronRight />
             </div>
 
-            <div className="absolute left-0 hidden items-center justify-center text-2xl w-9 h-full top-0 cursor-pointer z-10 opacity-0 group-hover:opacity-100 sm:flex" onClick={next}>
+            <div className={`absolute left-0 hidden items-center justify-center text-2xl w-9 h-[120%] top-1/2 -translate-y-1/2 cursor-pointer z-10 opacity-0 group-hover:opacity-100 ${movies.length > 4 ? 'sm:flex' : ''}`} onClick={next}>
                 <div className="w-full h-[100%] opacity-[9] bg-[#13121286] absolute right-0 z-[12]"></div>
                 <FaChevronLeft />
             </div>

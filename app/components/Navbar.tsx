@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import { BsChat } from 'react-icons/bs'
 import { FaCaretDown, FaCaretUp, FaRegBell, FaBars } from 'react-icons/fa'
 import { FiSearch } from 'react-icons/fi'
 import { MdChat } from 'react-icons/md'
@@ -43,13 +44,13 @@ export default function Navbar() {
             <li className='hover:opacity-75 md:hover:opacity-60 mb-3 md:mb-0'><Link href='/tvshows'>TV Shows</Link></li>
             <li className='hover:opacity-75 md:hover:opacity-60 mb-3 md:mb-0'><Link href='/movies'>Movies</Link></li>
             <li className='hover:opacity-75 md:hover:opacity-60 mb-3 md:mb-0'><Link href='/new&popular'>New & Popular</Link></li>
-            <li className='hover:opacity-75 md:hover:opacity-60 mb-3 md:mb-0'><Link href='/'>My List</Link></li>
+            <li className='hover:opacity-75 md:hover:opacity-60 mb-3 md:mb-0'><Link href='/mylist'>My List</Link></li>
             <li className='hover:opacity-75 md:hover:opacity-60 mb-3 md:mb-0'><Link href='/languages'>Browse by Languages</Link></li>
           </ul>
         </div>
 
         <ul className="ml-auto flex items-center text-xl w-[180px] justify-between">
-          <Link href='/chat'><li><MdChat /></li></Link>
+          <Link href='/chat'><li><BsChat /></li></Link>
           <li className='text-2xl'><FiSearch /></li>
           <li className='text-sm'>kids</li>
           <li><FaRegBell /></li>
