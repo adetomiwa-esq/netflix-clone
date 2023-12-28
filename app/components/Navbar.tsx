@@ -29,7 +29,7 @@ export default function Navbar() {
   }, [])
   
   return (
-    <nav className={`${bg} fixed top-0 left-0 w-full z-50 px-9 h-[65px] flex items-center`}>
+    <nav className={`${bg} fixed top-0 left-0 w-full z-50 px-2 sm:px-9 h-[65px] flex items-center`}>
         <div className='mr-2 cursor-pointer sm:hidden'><FaBars /></div>
         <div>
             <Image src='/images/netflixText.png' alt='logo' width={105} height={80} />
@@ -44,7 +44,7 @@ export default function Navbar() {
             <li className='hover:opacity-75 md:hover:opacity-60 mb-3 md:mb-0'><Link href='/movies'>Movies</Link></li>
             <li className='hover:opacity-75 md:hover:opacity-60 mb-3 md:mb-0'><Link href='/new&popular'>New & Popular</Link></li>
             <li className='hover:opacity-75 md:hover:opacity-60 mb-3 md:mb-0'><Link href='/'>My List</Link></li>
-            <li className='hover:opacity-75 md:hover:opacity-60 mb-3 md:mb-0'><Link href='/'>Browse by Languages</Link></li>
+            <li className='hover:opacity-75 md:hover:opacity-60 mb-3 md:mb-0'><Link href='/languages'>Browse by Languages</Link></li>
           </ul>
         </div>
 

@@ -42,6 +42,12 @@ body {
     }
 }
 
+@media(max-width: 600px){
+    .row_poster {
+        width: 70px;
+    }
+}
+
 option:hover {
     box-shadow: 0 0 10px 100px #1882A8 inset;
     background-color: blue !important;

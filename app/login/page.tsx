@@ -9,7 +9,7 @@ export default function page() {
             <section>
                 <input type="text" name="email" placeholder='Email or phone number' className='block w-full bg-zinc-800 py-4 px-4 rounded-md mb-4' />
                 <input type="password" name="password" id="" placeholder='password' className='block w-full bg-zinc-800 py-4 px-4 rounded-md'/>
-                <Link href="/browse" className='w-full mt-12 block'>
+                <Link href="/select-account" className='w-full mt-12 block'>
                     <button className="bg-red-600 rounded-md w-full  py-3">Sign In</button>
                 </Link>
 
