@@ -12,7 +12,7 @@ export default function page() {
         <div className='mt-28'>
           <h1 className='mb-[70px] text-3xl pl-[25px]'>My List</h1>
           <Row title='' movies={faves} />
-          <Row title='Netflix foreign specials' movies={foreign} />
+          <Row title='Top rated foreign specials from chat room' movies={foreign} />
         </div>
         <Footer />
     </main>
