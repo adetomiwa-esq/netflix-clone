@@ -42,12 +42,12 @@ export default function Navbar() {
           <div className='md:hidden ml-2 cursor-pointer h-full flex items-center'>Browse <i className='ml-[2px]'><FaCaretDown /></i></div>
           <ul className='justify-between items-center ml-6 fixed flex-col bg-[#141414] opacity-80 w-[300px] left-10 top-16 py-6 hidden transition-all delay-300 group-hover:flex border-t-2 md:border-t-0 md:h-full md:flex md:py-0 md:text-[13px] lg:text-sm lg:w-[540px] md:w-[450px] md:opacity-100 md:bg-transparent md:flex-row md:static'>
             <li className='-mt-[37px] md:hidden'><FaCaretUp /></li>
-            <li className={`opacity-60 hover:opacity-100 mb-3 md:mb-0 ${ pathname === '/' ? 'opacity-100' : '' }`}><Link href='/browse'>Home</Link></li>
-            <li className={`opacity-60 hover:opacity-100 mb-3 md:mb-0 ${ pathname === '/tvshows' ? 'opacity-100' : '' }`}><Link href='/tvshows'>TV Shows</Link></li>
-            <li className={`opacity-60 hover:opacity-100 mb-3 md:mb-0 ${ pathname === '/movies' ? 'opacity-100' : '' }`}><Link href='/movies'>Movies</Link></li>
-            <li className={`opacity-60 hover:opacity-100 mb-3 md:mb-0 ${ pathname === '/new&popular' ? 'opacity-100' : '' }`}><Link href='/new&popular'>New & Popular</Link></li>
-            <li className={`opacity-60 hover:opacity-100 mb-3 md:mb-0 ${ pathname === '/mylist' ? 'opacity-100' : '' }`}><Link href='/mylist'>My List</Link></li>
-            <li className={`opacity-60 hover:opacity-100 mb-3 md:mb-0 ${ pathname === '/languages' ? 'opacity-100' : '' }`}><Link href='/languages'>Browse by Languages</Link></li>
+            <li className={`hover:opacity-100 mb-3 md:mb-0 ${ pathname === '/browse' ? 'opacity-100' : 'opacity-60' }`}><Link href='/browse'>Home</Link></li>
+            <li className={`hover:opacity-100 mb-3 md:mb-0 ${ pathname === '/tvshows' ? 'opacity-100' : 'opacity-60' }`}><Link href='/tvshows'>TV Shows</Link></li>
+            <li className={`hover:opacity-100 mb-3 md:mb-0 ${ pathname === '/movies' ? 'opacity-100' : 'opacity-60' }`}><Link href='/movies'>Movies</Link></li>
+            <li className={`hover:opacity-100 mb-3 md:mb-0 ${ pathname === '/new&popular' ? 'opacity-100' : 'opacity-60' }`}><Link href='/new&popular'>New & Popular</Link></li>
+            <li className={`hover:opacity-100 mb-3 md:mb-0 ${ pathname === '/mylist' ? 'opacity-100' : 'opacity-60' }`}><Link href='/mylist'>My List</Link></li>
+            <li className={`hover:opacity-100 mb-3 md:mb-0 ${ pathname === '/languages' ? 'opacity-100' : 'opacity-60' }`}><Link href='/languages'>Browse by Languages</Link></li>
           </ul>
         </div>
 

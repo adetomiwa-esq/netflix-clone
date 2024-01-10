@@ -13,7 +13,8 @@ function ChatSection() {
         img: 'https://occ-0-5543-300.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABY20DrC9-11ewwAs6nfEgb1vrORxRPP9IGmlW1WtKuaLIz8VxCx5NryzDK3_ez064IsBGdXjVUT59G5IRuFdqZlCJCneepU.png?r=229',
         name: 'Janet',
         rating: 0,
-        review: ''
+        review: '',
+        original: true
     })
 
 
@@ -55,7 +56,8 @@ function ChatSection() {
             img: 'https://occ-0-5543-300.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABY20DrC9-11ewwAs6nfEgb1vrORxRPP9IGmlW1WtKuaLIz8VxCx5NryzDK3_ez064IsBGdXjVUT59G5IRuFdqZlCJCneepU.png?r=229',
             name: 'Janet',
             rating: 1,
-            review: ''
+            review: '',
+            original: true
         })
     }
     
@@ -140,8 +142,8 @@ function ChatSection() {
                 <div className='h-full pb-[84px] pt-4 overflow-y-scroll px-3'>
                     {
                         allRatings.map((rating, i) => (
-                            <div key={i} className='w-3/6 mb-6'>
-                                <div className="flex items-center mb-2">
+                            <div key={i} className={`mb-6 w-3/6 ${rating.original ? 'ml-auto' : '' }`}>
+                                <div className={`${rating.original ? 'justify-end' : ''} flex items-center mb-2`}>
                                     <img
                                         src={rating.img}
                                         alt=""
@@ -166,7 +168,7 @@ function ChatSection() {
                                         </div>
                                 </div>
                                 </div>
-                                <p className='bg-blue-950 rounded-lg p-3 text-sm'>{rating.review}</p>
+                                <p className={`${rating.original ? 'bg-red-500 ml-auto' : 'bg-blue-950'} rounded-lg p-3 text-sm`}>{rating.review}</p>
                             </div>
                         ))
                     }
